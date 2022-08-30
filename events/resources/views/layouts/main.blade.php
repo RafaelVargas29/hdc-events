@@ -6,6 +6,16 @@
 
         <title>@yield ('title')</title>
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <!-- fontes do google-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+        <!--CSS Bootstrap -->
+
+        <!--CSS da aplicação -->
+
         <script src="/js/scripts.js"></script>
     </head>
     <body>
