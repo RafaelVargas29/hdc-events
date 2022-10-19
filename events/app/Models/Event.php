@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Event extends Model
 {
@@ -13,5 +14,9 @@ class Event extends Model
         'items' => 'array'
     ];
 
-    protected $dates = ['date'];    
+    protected $dates = ['date'];   
+    
+    public function user(){
+        return $this->belongsTo('App\Models\user'); 
+    }
 }
