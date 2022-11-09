@@ -29,7 +29,7 @@
                             <form action="/events/{{ $event->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger delete-btn"> <ion-icon name="trash-outline"></ion-icon>Deletar</button>
+                                <button type="submit" class="btn btn-danger delete-btn"> <ion-icon name="trash-outline"></ion-icon>Deletar</button>
                             </form>
                         </td>
                     </tr>
