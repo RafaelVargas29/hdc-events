@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\User;
+use App\Models\EventUser;
 class EventController extends Controller
 {
     public function index(){
@@ -90,6 +91,12 @@ class EventController extends Controller
     }
 
     public function destroy($id){
+        $ev = EventUser::where('event_id', $id)->get();
+        
+        foreach($ev as $e){
+            $e->delete();
+        }
+
         Event::findOrFail($id)->delete();
 
         return redirect('/dashboard')->with('msg','Evento excluído com sucesso!');

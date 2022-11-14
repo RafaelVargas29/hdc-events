@@ -23,12 +23,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    
+     public function down()
     {
-        Schema::table('events', function (Blueprint $table) {
+       /* Schema::table('events', function (Blueprint $table) {
             $table->foreignId('user_id')
             ->constrained()
             ->onDelete('cascade');
-        });
+        });*/
     }
 };
